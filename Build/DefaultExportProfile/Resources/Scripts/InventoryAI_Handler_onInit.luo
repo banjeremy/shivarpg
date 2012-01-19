@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function InventoryAI.onInit()
+
+
+this.addItem("balls",7)
+this.removeItem("balls",1)
+
+
+end

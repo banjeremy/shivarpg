@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function SimpleCameraAI.onInit()
+
+
+this.hSimpleCamera(this.getObject())
+
+
+end
