@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function SimpleCameraAI.onSensorCollisionBegin(nSensorID,hTargetObject,nTargetSensorID)
+
+local s=application.getCurrentUserScene()
+scene.destroyRuntimeObject(s,hTargetObject)
+
+
+end
