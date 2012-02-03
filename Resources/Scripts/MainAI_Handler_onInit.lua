@@ -12,6 +12,7 @@ function MainAI.onInit (  )
     this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
     this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ) )
     application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
+    hud.setCursorVisible ( application.getCurrentUser ( ), false )
     
 --------------------------------------------------------------------------------
 end

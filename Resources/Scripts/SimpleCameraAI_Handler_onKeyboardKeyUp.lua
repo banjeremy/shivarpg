@@ -12,13 +12,13 @@ function SimpleCameraAI.onKeyboardKeyUp ( kKeyCode )
         this.bMoveForward ( false )
     end
     if ( kKeyCode == input.kKeyA ) then
-        this.bRotateLeft ( false )
+        this.bStrafeLeft ( false )
     end
     if ( kKeyCode == input.kKeyS ) then
         this.bMoveBackward ( false )
     end
     if ( kKeyCode == input.kKeyD ) then
-        this.bRotateRight ( false )
+        this.bStrafeRight ( false )
     end
 	
 --------------------------------------------------------------------------------

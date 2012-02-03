@@ -7,8 +7,10 @@
 --------------------------------------------------------------------------------
 function MainAI.onKeyboardKeyUp ( kKeyCode )
 --------------------------------------------------------------------------------
-	
-object.sendEvent ( this.hSimpleCamera1 ( ),  "SimpleCameraAI", "onKeyboardKeyUp", kKeyCode )
+
+    if ( this.bHandleInputs ( ) ) then
+        object.sendEvent ( this.hSimpleCamera1 ( ),  "SimpleCameraAI", "onKeyboardKeyUp", kKeyCode )
+    end
 	
 --------------------------------------------------------------------------------
 end

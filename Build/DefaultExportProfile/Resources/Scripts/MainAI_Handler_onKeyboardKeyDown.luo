@@ -8,7 +8,13 @@
 function MainAI.onKeyboardKeyDown(kKeyCode)
 
 
+if(kKeyCode==input.kKeyEscape)then
+this.bHandleInputs(false)
+end
+
+if(this.bHandleInputs())then
 object.sendEvent(this.hSimpleCamera1(),"SimpleCameraAI","onKeyboardKeyDown",kKeyCode)
+end
 
 
 end

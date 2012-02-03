@@ -9,6 +9,7 @@ function SimpleCameraAI.onInit()
 
 
 this.hSimpleCamera(this.getObject())
+this.createDynamicObject()
 
 
 end

@@ -12,16 +12,33 @@ function SimpleCameraAI.onKeyboardKeyDown ( kKeyCode )
         this.bMoveForward ( true )
     end
     if ( kKeyCode == input.kKeyA ) then
-        this.bRotateLeft ( true )
+        this.bStrafeLeft ( true )
     end
     if ( kKeyCode == input.kKeyS ) then
         this.bMoveBackward ( true )
     end
     if ( kKeyCode == input.kKeyD ) then
-        this.bRotateRight ( true )
+        this.bStrafeRight ( true )
     end
     if ( kKeyCode == input.kKeySpace ) then
-        dynamics.addLinearImpulse ( this.hSimpleCamera ( ), 0, 1500, 0, object.kGlobalSpace )
+        local dynObject = this.hDynObject ( )
+    
+        if ( dynObject ~= nil )
+        then
+            local s = application.getCurrentUserScene ( )
+        
+            if ( s ~= nil )
+            then
+                local x, y, z = object.getTranslation       ( dynObject, object.kGlobalSpace )
+                local o, d, i = scene.getFirstHitCollider   ( s, x, y, z, 0, -1, 0, 1.0 )
+                
+                if ( o ~= nil )
+                then
+                    dynamics.addLinearImpulse ( dynObject, 0, 1500, 0, object.kGlobalSpace )
+                    log.message ( "jumping" )
+                end
+            end
+        end
     end
 --------------------------------------------------------------------------------
 end
