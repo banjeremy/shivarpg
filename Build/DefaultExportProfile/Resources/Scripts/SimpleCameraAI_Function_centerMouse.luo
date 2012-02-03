@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function SimpleCameraAI.centerMouse()
+
+
+hud.setCursorPosition(application.getCurrentUser(),50,50)
+
+
+end
